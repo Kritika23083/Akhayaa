@@ -42,7 +42,7 @@ export function Testimonials() {
               </p>
               <div className="mt-8 border-t border-[#eadcc8] pt-4">
                 <p className="font-semibold text-[#201a16]">{testimonial.name}</p>
-                <p className="mt-1 text-sm text-[#7a6b5d]">{testimonial.trip}</p>
+                <p className="mt-1 text-sm text-[#7a6b5d]">{testimonial.context}</p>
               </div>
             </motion.article>
           ))}

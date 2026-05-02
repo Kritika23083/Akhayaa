@@ -9,6 +9,11 @@ type FloatingParticlesProps = {
   reduced?: boolean;
 };
 
+function seededParticleValue(seed: number) {
+  const value = Math.sin(seed * 12.9898) * 43758.5453;
+  return value - Math.floor(value);
+}
+
 export function FloatingParticles({ reduced = false }: FloatingParticlesProps) {
   const ref = useRef<THREE.Points>(null);
   const count = reduced ? 45 : 115;
@@ -17,9 +22,9 @@ export function FloatingParticles({ reduced = false }: FloatingParticlesProps) {
     const points = new Float32Array(count * 3);
 
     for (let i = 0; i < count; i += 1) {
-      points[i * 3] = (Math.random() - 0.5) * 9;
-      points[i * 3 + 1] = Math.random() * 4.5 - 1.2;
-      points[i * 3 + 2] = (Math.random() - 0.5) * 5.8;
+      points[i * 3] = (seededParticleValue(i + 1) - 0.5) * 9;
+      points[i * 3 + 1] = seededParticleValue(i + 101) * 4.5 - 1.2;
+      points[i * 3 + 2] = (seededParticleValue(i + 201) - 0.5) * 5.8;
     }
 
     return points;

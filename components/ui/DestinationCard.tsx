@@ -22,7 +22,7 @@ export function DestinationCard({
         className,
       )}
     >
-      <div className={cn("absolute inset-0 bg-gradient-to-br", destination.imageTone)} />
+      <div className={cn("absolute inset-0 bg-gradient-to-br", destination.palette)} />
       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(20,16,12,0.02),rgba(20,16,12,0.68))]" />
       <div className="absolute inset-0 opacity-0 transition duration-700 group-hover:scale-105 group-hover:opacity-20 bg-[radial-gradient(circle_at_50%_25%,white,transparent_38%)]" />
       <div className="relative flex h-full flex-col justify-between p-6 text-white">
@@ -32,7 +32,7 @@ export function DestinationCard({
           </span>
         </div>
         <div>
-          <p className="mb-3 text-xs uppercase tracking-[0.32em] text-white/70">{destination.vibe}</p>
+          <p className="mb-3 text-xs uppercase tracking-[0.32em] text-white/70">{destination.region}</p>
           <h3 className="font-serif text-3xl leading-tight">{destination.name}</h3>
         </div>
       </div>

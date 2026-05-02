@@ -2,11 +2,12 @@
 
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import type { ButtonHTMLAttributes, ReactNode } from "react";
+import type { HTMLMotionProps } from "framer-motion";
+import type { ReactNode } from "react";
 
 import { cn } from "@/lib/utils";
 
-type PremiumButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+type PremiumButtonProps = Omit<HTMLMotionProps<"button">, "children"> & {
   children: ReactNode;
   variant?: "primary" | "secondary" | "ghost";
   size?: "sm" | "md";

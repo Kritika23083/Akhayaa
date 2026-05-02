@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Menu, Sparkles, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { PremiumButton } from "@/components/ui/PremiumButton";
@@ -34,7 +35,7 @@ export function Navbar() {
             : "border-white/35 bg-[#fffaf1]/28 backdrop-blur-md",
         )}
       >
-        <a href="/" className="group flex items-center gap-3">
+        <Link href="/" className="group flex items-center gap-3">
           <span className="grid size-10 place-items-center rounded-full bg-[#201a16] text-[#f7dfab] shadow-[0_10px_30px_rgba(32,26,22,0.28)]">
             <Sparkles className="size-4" />
           </span>
@@ -46,7 +47,7 @@ export function Navbar() {
               Verified for real life
             </span>
           </span>
-        </a>
+        </Link>
 
         <div className="hidden items-center gap-7 lg:flex">
           {navItems.map((item) => (
