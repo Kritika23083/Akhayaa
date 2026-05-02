@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8f1e6;
+  --foreground: #201a16;
+  --ivory: #fffaf1;
+  --charcoal: #201a16;
+  --terracotta: #b76345;
+  --terracotta-soft: #e8b59f;
+  --sage: #687764;
+  --sage-soft: #dfe7d8;
+  --sand: #ead9bd;
+  --gold: #c8a86a;
+  --olive-shadow: rgba(75, 72, 45, 0.18);
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-playfair);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--background);
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  color: var(--foreground);
+  background:
+    radial-gradient(circle at top left, rgba(232, 181, 159, 0.22), transparent 34rem),
+    linear-gradient(180deg, #fbf4e9 0%, #f7efe2 44%, #f4ead9 100%);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body::selection {
+  color: #fffaf1;
+  background: #9d5138;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+.font-editorial {
+  font-family: var(--font-serif), Georgia, serif;
+}
+
+.premium-container {
+  width: min(100% - 2rem, 1180px);
+  margin-inline: auto;
+}
+
+.premium-shell {
+  position: relative;
+  isolation: isolate;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.text-pretty {
+  text-wrap: pretty;
+}
+
+.glass-panel {
+  border: 1px solid rgba(255, 250, 241, 0.54);
+  background: linear-gradient(135deg, rgba(255, 250, 241, 0.72), rgba(255, 250, 241, 0.42));
+  box-shadow:
+    0 24px 70px rgba(74, 61, 42, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.68);
+  backdrop-filter: blur(22px);
+}
+
+.noise-overlay {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.022) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+  background-size: 34px 34px;
+  opacity: 0.45;
+  mix-blend-mode: soft-light;
+}
+
+.cinematic-mask {
+  mask-image: linear-gradient(180deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
