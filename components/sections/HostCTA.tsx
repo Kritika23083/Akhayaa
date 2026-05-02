@@ -27,8 +27,11 @@ export function HostCTA() {
               Get listed, verified, photographed, and discovered by travellers looking for
               something special.
             </p>
-            <PremiumButton className="mt-8 bg-[#fffaf1] text-[#201a16] hover:bg-[#f3dfb3]">
-              List Your Property <ArrowUpRight className="size-4" />
+            <PremiumButton
+              className="mt-8 bg-[#fffaf1] text-[#201a16] hover:bg-[#f3dfb3]"
+              icon={<ArrowUpRight className="size-4" />}
+            >
+              List Your Property
             </PremiumButton>
           </div>
 

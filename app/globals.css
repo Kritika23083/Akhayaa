@@ -57,9 +57,34 @@ select {
   font-family: var(--font-serif), Georgia, serif;
 }
 
+.font-serif {
+  font-family: var(--font-serif), Georgia, serif;
+}
+
+.font-sans {
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
 .premium-container {
   width: min(100% - 2rem, 1180px);
   margin-inline: auto;
+}
+
+.section-shell {
+  position: relative;
+  padding: 6rem 1rem;
+}
+
+@media (min-width: 640px) {
+  .section-shell {
+    padding-inline: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-shell {
+    padding: 8rem 2rem;
+  }
 }
 
 .premium-shell {
@@ -91,6 +116,16 @@ select {
   background-size: 34px 34px;
   opacity: 0.45;
   mix-blend-mode: soft-light;
+}
+
+.akhaya-noise {
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(64, 47, 34, 0.18) 1px, transparent 0),
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size:
+    18px 18px,
+    42px 42px;
+  mix-blend-mode: multiply;
 }
 
 .cinematic-mask {

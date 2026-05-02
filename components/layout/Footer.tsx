@@ -3,15 +3,29 @@ import Link from "next/link";
 const footerGroups = [
   {
     title: "Akhaya",
-    links: ["Explore", "Destinations", "Experiences", "Hosts"],
+    links: [
+      { label: "Explore", href: "#featured" },
+      { label: "Destinations", href: "#destinations" },
+      { label: "Experiences", href: "#experiences" },
+      { label: "Hosts", href: "#hosts" },
+    ],
   },
   {
     title: "Company",
-    links: ["About", "Contact", "Instagram", "Trust & Safety"],
+    links: [
+      { label: "About", href: "#why-akhaya" },
+      { label: "Contact", href: "mailto:hello@akhayaescapes.com" },
+      { label: "Instagram", href: "https://instagram.com" },
+      { label: "Trust & Safety", href: "#trust" },
+    ],
   },
   {
     title: "Policies",
-    links: ["Cancellation Policy", "Terms", "Privacy"],
+    links: [
+      { label: "Cancellation Policy", href: "/" },
+      { label: "Terms", href: "/" },
+      { label: "Privacy", href: "/" },
+    ],
   },
 ];
 
@@ -41,11 +55,11 @@ export function Footer() {
               <div className="mt-5 space-y-3">
                 {group.links.map((link) => (
                   <Link
-                    key={link}
-                    href="#"
+                    key={link.label}
+                    href={link.href}
                     className="block text-sm text-[#efe3d3]/78 transition hover:text-white"
                   >
-                    {link}
+                    {link.label}
                   </Link>
                 ))}
               </div>

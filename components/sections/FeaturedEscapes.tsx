@@ -6,7 +6,7 @@ import { StayCard } from "@/components/ui/StayCard";
 
 export function FeaturedEscapes() {
   return (
-    <section id="explore" className="px-4 py-24 sm:px-6 lg:px-8">
+    <section id="featured" className="px-4 py-24 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <SectionHeading
           eyebrow="Featured escapes"

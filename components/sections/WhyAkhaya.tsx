@@ -34,7 +34,7 @@ const reasons = [
 
 export function WhyAkhaya() {
   return (
-    <section id="about" className="px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+    <section id="why-akhaya" className="px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <SectionHeading
@@ -56,7 +56,7 @@ export function WhyAkhaya() {
                   transition={{ duration: 0.7, delay: index * 0.06, ease: [0.22, 1, 0.36, 1] }}
                   className="group grid gap-5 rounded-[2rem] border border-white/60 bg-[#fffaf1]/70 p-5 shadow-[0_18px_55px_rgba(85,64,43,0.1)] backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:bg-[#fffaf1]/88 sm:grid-cols-[auto_1fr] sm:p-6"
                 >
-                  <div className="grid size-13 place-items-center rounded-2xl bg-[#201a16] text-[#f2cf87] shadow-[0_15px_34px_rgba(32,26,22,0.18)] transition group-hover:rotate-[-3deg]">
+                  <div className="grid size-[3.25rem] place-items-center rounded-2xl bg-[#201a16] text-[#f2cf87] shadow-[0_15px_34px_rgba(32,26,22,0.18)] transition group-hover:rotate-[-3deg]">
                     <Icon className="size-5" />
                   </div>
                   <div>
